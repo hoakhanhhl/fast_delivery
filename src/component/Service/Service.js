@@ -3,6 +3,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 export default class SimpleSlider extends Component {
+    constructor(props) {
+        super(props);
+        this.next = this.next.bind(this);
+        this.previous = this.previous.bind(this);
+    }
+    next() {
+        this.slider.slickNext();
+    }
+    previous() {
+        this.slider.slickPrev();
+    }
     render() {
         const settings = {
             dots: true,
@@ -14,7 +25,7 @@ export default class SimpleSlider extends Component {
         return (
             <div>
                 <h2> Single Item</h2>
-                <Slider {...settings}>
+                <Slider ref={c => (this.slider = c)}{...settings}>
                     <div>
                         <h3 className="bg-black mr-2">1</h3>
                     </div>
@@ -34,6 +45,14 @@ export default class SimpleSlider extends Component {
                         <h3>6</h3>
                     </div>
                 </Slider>
+                <div style={{ textAlign: "center" }}>
+                    <button className="button" onClick={this.previous}>
+                        Previous
+                    </button>
+                    <button className="button" onClick={this.next}>
+                        Next
+                    </button>
+                </div>
             </div>
         );
     }
