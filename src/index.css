@@ -20,7 +20,7 @@ code {
     @apply hover:text-orange transition-all duration-200 cursor-pointer px-2 self-center font-sans;
   }
   .btn-signIn {
-    @apply bg-orange border-orange border-2 rounded-md hover:bg-white px-8 py-2 text-white hover:text-orange;
+    @apply bg-orange border-orange border-2 rounded-md hover:bg-white px-8 py-2 text-white hover:text-orange font-sans;
   }
 }
 .dropbtn {
@@ -500,6 +500,7 @@ h3 {
   border-style: solid;
   border-width: 23px 25px 0 0;
 }
+/* ===Comment=== */
 .comment {
   padding: 60px 0;
   display: flex;
@@ -509,4 +510,89 @@ h3 {
   padding-left: 15px;
   margin: 0 75px;
   width: 100%;
+}
+
+/* ====Policy==== */
+
+.containerPolicy {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: 75px;
+  margin-left: 75px;
+  display: flex;
+  flex-direction: column;
+}
+.heading-page {
+  padding: 35px 0 60px;
+  text-align: center;
+}
+.heading-page h1 {
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  line-height: initial;
+  color: #00467f;
+  text-transform: uppercase;
+  margin-bottom: 0;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.icon-policy {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  width: 80%;
+  height: 2px;
+  background: #00467f;
+}
+.content-page {
+  display: flex;
+  flex-direction: column;
+}
+.policy {
+  margin: 0 0 10px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #333;
+}
+strong {
+  font-weight: 600;
+}
+hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 0;
+  border-top: 1px solid #eee;
+}
+.h2-policy {
+  font-size: 28px;
+  color: #0c1325;
+  margin: 0 0 13px 0;
+  font-weight: 500;
+  line-height: 1.2;
+  font-family: "Montserrat", sans-serif;
+}
+b {
+  font-weight: 600;
+}
+.content-page ul {
+  padding-left: 40px;
+  list-style-type: disc;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.li-policy {
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  font-size: 16px;
+  color: #0c1325;
+}
+ol {
+  padding-left: 40px;
+  list-style-type: disc;
 }

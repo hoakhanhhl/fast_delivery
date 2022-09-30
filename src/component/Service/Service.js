@@ -23,33 +23,33 @@ export default class SimpleSlider extends Component {
             slidesToScroll: 1
         };
         return (
-            <div>
+            <div className="container">
                 <h2> Single Item</h2>
                 <Slider ref={c => (this.slider = c)}{...settings}>
                     <div>
-                        <h3 className="bg-black mr-2">1</h3>
+                        <h3 className="bg-black mr-40 ">1</h3>
                     </div>
                     <div>
-                        <h3>2</h3>
+                        <h3 className="bg-orange mr-40">2</h3>
                     </div>
                     <div>
-                        <h3>3</h3>
+                        <h3 className="bg-black mr-40">3</h3>
                     </div>
                     <div>
-                        <h3>4</h3>
+                        <h3 className="bg-orange mr-40">4</h3>
                     </div>
                     <div>
-                        <h3>5</h3>
+                        <h3 className="bg-black mr-40">5</h3>
                     </div>
                     <div>
-                        <h3>6</h3>
+                        <h3 className="bg-orange mr-40">6</h3>
                     </div>
                 </Slider>
                 <div style={{ textAlign: "center" }}>
-                    <button className="button" onClick={this.previous}>
+                    <button className="text-orange bg-slate-600 px-5 mr-60" onClick={this.previous} >
                         Previous
                     </button>
-                    <button className="button" onClick={this.next}>
+                    <button className="text-orange bg-slate-600 px-5 mr-60" onClick={this.next}>
                         Next
                     </button>
                 </div>
