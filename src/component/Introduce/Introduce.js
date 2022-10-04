@@ -2,8 +2,8 @@ import { NavLink } from 'react-router-dom'
 import React from 'react';
 import { AiOutlinePause } from "react-icons/ai";
 import { ImMail4 } from "react-icons/im";
-import SimpleSlider from "./SliderIntroduce"
-
+import SimpleSlider from "./SliderIntroduce";
+import Footer from "../Footer/Footer"
 function Introduce() {
     return (
         <div>
@@ -156,6 +156,7 @@ function Introduce() {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div >
     )
 }

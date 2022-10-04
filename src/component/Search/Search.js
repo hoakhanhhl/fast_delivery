@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import Footer from "../Footer/Footer"
 function Search(props) {
     const [idOrder, setIdOrder] = useState('');
     // const [order, setOrder] = useState([]);
@@ -22,6 +22,7 @@ function Search(props) {
                     placeholder="Nhập mã đơn hàng để tìm kiếm"
                 />
             </form>
+            <Footer />
         </div>
     )
 }

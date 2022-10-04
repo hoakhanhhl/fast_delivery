@@ -9,7 +9,6 @@ import Introduce from './component/Introduce/Introduce';
 import Search from './component/Search/Search';
 import Service from './component/Service/Service';
 import Policy from './component/Policy/Policy';
-import Footer from './component/Footer/Footer';
 import ScrollToTop from './component/ScrollToTop'
 
 function App() {
@@ -31,7 +30,6 @@ function App() {
             <Route path="/order" element={<Order />} />
           </Routes>
         </div>
-        <Footer />
       </div>
     </>
 
