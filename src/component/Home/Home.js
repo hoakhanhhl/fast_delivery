@@ -1,10 +1,9 @@
-import Slider from "./Slider"
+import SimpleSlider from "./Slider"
 
-const Home = () => {
+function Home() {
 
     return <div>
-        <Slider />
-
+        <SimpleSlider />
     </div>
 
 }

@@ -5,7 +5,7 @@ import { BiChevronDown } from "react-icons/bi";
 // import Service from '../Service/Service';
 const NavBar = () => {
     return (
-        <nav className="flex items-center md:px-20">
+        <nav className="flex items-center md:px-20 bg-white w-full shadow">
             <div className="flex items-center">
                 <NavLink to="/" itemprop="url" title="GHN - Giao Hàng Nhanh Toàn Quốc">
                     <img itemprop="logo" src="//theme.hstatic.net/200000472237/1000829412/14/logo.png?v=481" alt="GHN - Giao Hàng Nhanh Toàn Quốc" className="logoimg" />

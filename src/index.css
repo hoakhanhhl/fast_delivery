@@ -231,13 +231,7 @@ code {
   color: #0c1325;
   font-family: Arial, Helvetica, sans-serif;
 }
-.desc {
-  margin: 0 0 10px;
-  font-family: "Montserrat", sans-serif;
-  line-height: 1.8;
-  font-size: 20px;
-  color: #0c1325;
-}
+
 .s-banner {
   margin-top: 65px;
   padding: 0;
@@ -287,7 +281,7 @@ img {
 
   color: #0c1325;
 }
-p {
+.p-introduce {
   margin: 0 0 10px;
   display: block;
   margin-block-start: 1em;
@@ -298,6 +292,18 @@ p {
   font-family: "Montserrat", sans-serif;
   line-height: 1.8;
   color: #0c1325;
+}
+.p-introduce-x {
+  margin: 0 0 10px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-size: 17px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  color: #656b9c;
 }
 .right-col {
   width: 50%;
@@ -469,12 +475,8 @@ h3 {
   background-color: rgba(7, 79, 128, 0.2);
   margin: 0px 20px 0px 0px;
   border-radius: 50% 50% 50% 50%;
-}
-.svg {
-  display: block;
-  width: 46px;
-  height: 46px;
-  margin: auto;
+  justify-self: center;
+  align-items: center;
 }
 .icon-title {
   width: 4px;
@@ -502,16 +504,42 @@ h3 {
 }
 /* ===Comment=== */
 .comment {
-  padding: 60px 0;
+  padding: 60px 90px;
   display: flex;
-}
-.containerComment {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin: 0 75px;
   width: 100%;
 }
-
+.containerComment {
+  width: 100%;
+}
+.box-comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.box-comment p {
+  color: #656b9c;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 1.6em;
+  padding: 80px 200px 80px 80px;
+  border-radius: 5px 5px 5px 5px;
+  background-color: #f0f3fd;
+  font-family: "Montserrat", sans-serif;
+}
+.box-comment:after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-style: solid;
+  border-width: 10px 10px 0;
+  border-color: #f3f1fd transparent transparent transparent;
+  left: 10%;
+  border-right-width: 21px;
+  margin-left: calc(21px / -2);
+  border-top-width: 23px;
+  bottom: -23px;
+  border-left-width: 0px;
+}
 /* ====Policy==== */
 
 .containerPolicy {
@@ -595,4 +623,26 @@ b {
 ol {
   padding-left: 40px;
   list-style-type: disc;
+}
+
+/* ====Slider==== */
+.icon-slider {
+  color: white;
+  content: "";
+  position: absolute;
+  top: -17px;
+  right: 50%;
+  border: 8px solid transparent;
+  border-top-color: #fff;
+  border-right-color: #fff;
+  transform: rotate(-45deg);
+  transition: all 0.5s ease;
+  z-index: 9;
+  opacity: 0;
+  visibility: hidden;
+}
+
+li.slick-active .dot span {
+  font-weight: 700;
+  font-family: "Montserrat", sans-serif;
 }
