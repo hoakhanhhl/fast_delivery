@@ -41,8 +41,8 @@ function SimpleSlider() {
                     break;
             }
             return (
-                <div className="dot w-1/4 text-black float-left py-3 border-b-2">
-                    <span className="border-right-2 flex items-center justify-center border-r-2 py-6 text-black cursor-pointer font-sans font-normal transition ease-in-out delay-150 hover:font-semibold hover:text-orange duration-300 ...">{content}</span>
+                <div className="dot w-1/4 text-black float-left py-3 border-b-2 h-32">
+                    <span className="h-full text-sm text-center px-6 border-right-2 flex items-center justify-center border-r-2 py-6 text-black cursor-pointer font-sans font-normal transition ease-in-out delay-150 hover:font-semibold hover:text-orange duration-300 ...">{content}</span>
                 </div>
             );
         },

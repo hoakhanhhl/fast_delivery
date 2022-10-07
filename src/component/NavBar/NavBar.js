@@ -13,10 +13,10 @@ const NavBar = () => {
             </div>
             <ul className="md:flex md:gap-10 ml-auto text-16 font-semibold mr-0">
                 <li className="btn-hover"><NavLink to="/">TRANG CHỦ</NavLink></li>
-                <li className="btn-hover"><NavLink to="/Introduce">VỀ CHÚNG TÔI</NavLink></li>
-                <li className="btn-hover"><NavLink to="/Search">TRA CỨU</NavLink></li>
+                <li className="btn-hover"><NavLink to="/introduce">VỀ CHÚNG TÔI</NavLink></li>
+                <li className="btn-hover"><NavLink to="/search">TRA CỨU</NavLink></li>
                 <li className="dropdown">
-                    <NavLink className="dropbtn" to="/Service">DỊCH VỤ<BiChevronDown className="icon-dropdown" /></NavLink>
+                    <NavLink className="dropbtn" to="/service">DỊCH VỤ<BiChevronDown className="icon-dropdown" /></NavLink>
                     <div className="dropdown-content">
                         <div className="dropdown-list">
                             <div className="dropdown-content-left">
@@ -55,8 +55,8 @@ const NavBar = () => {
                         </div>
                     </div>
                 </li>
-                <li className="btn-hover"><NavLink to="/Policy">CHÍNH SÁCH</NavLink></li>
-                <button className="btn-signIn"><NavLink to="/SignIn">ĐĂNG KÝ/ ĐĂNG NHẬP</NavLink></button>
+                <li className="btn-hover"><NavLink to="/policy">CHÍNH SÁCH</NavLink></li>
+                <button className="btn-signIn"><NavLink to="/login">ĐĂNG KÝ/ ĐĂNG NHẬP</NavLink></button>
 
             </ul>
         </nav>

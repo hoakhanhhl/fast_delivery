@@ -12,6 +12,8 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import axiosClient from '../../config/axiosClient';
+import { NavLink } from 'react-router-dom';
 
 const theme = createTheme();
 
@@ -19,10 +21,15 @@ function SignIn() {
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
-        console.log({
+ 
+        const user = {
             email: data.get('email'),
             password: data.get('password'),
-        });
+        }
+
+        axiosClient.post('/user/auth/login', user ).then((res)=> {
+            console.log(res.data);
+        }).catch((err) => console.log(err));
     };
 
     return (
@@ -83,9 +90,9 @@ function SignIn() {
                                 </Link>
                             </Grid>
                             <Grid item>
-                                <Link href="#" variant="body2">
+                                <NavLink to="/register" title="register" className="text-sm font-normal underline text-blue-400">
                                     {"Don't have an account? Sign Up"}
-                                </Link>
+                                </NavLink>
                             </Grid>
                         </Grid>
                     </Box>
