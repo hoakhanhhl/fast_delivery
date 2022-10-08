@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const axiosClient = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: process.env.REACT_APP_URL,
     headers: {
         "Content-Type": "application/json",
         "Authorization": 'Bearer ' + localStorage.getItem('accessTokenFD')
