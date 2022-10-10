@@ -3,7 +3,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
-import Toolbar from '@mui/material/Toolbar';
 import Paper from '@mui/material/Paper';
 import Stepper from '@mui/material/Stepper';
 import Step from '@mui/material/Step';
@@ -12,9 +11,11 @@ import Button from '@mui/material/Button';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
-import Customer from './Customer';
-import Seller from './Seller';
-import Review from './Review';
+import CreateOrder from './CreateOrder';
+import OrderDetail from './OrderDetail';
+import { useSelector } from 'react-redux';
+import axiosClient from '../../config/axiosClient';
+import { NavLink } from 'react-router-dom';
 
 function Copyright() {
     return (
@@ -29,41 +30,68 @@ function Copyright() {
     );
 }
 
-const steps = ['Customer', 'Seller', 'Review'];
+const steps = ['Tạo đơn hàng', 'Thông tin đơn hàng'];
 
 
 const theme = createTheme();
 
 function Order() {
+    const user = useSelector((state)=> state.user.value);
+    // useEffect(()=> {
+       
+    // }, user);
     const [activeStep, setActiveStep] = React.useState(0);
     const [data, setData] = React.useState({
-        customer: {},
-        seller: {},
+        order: {
+            nguoiTao: user,
+            diaChi: "",
+            nguoiNhan: "",
+            tenDonHang: "",
+            sdt: "",
+            value: 0,
+            khoiLuong: 0,
+            email: null,
+            phiShip: 30000
+        },
     })
-    console.log(data);
+    const [orderID, setOrderID] = React.useState(null);
 
+    const handleSubmitOrder = () => {
+        axiosClient.post('/order', data.order)
+        .then((res) => {
+            console.log(res.data)
+            setOrderID(res.data.orderID);
+        }).catch((err) => {
+            console.log(err);
+        })
+    }
     const handleNext = () => {
+        if(activeStep === 1){
+            handleSubmitOrder();
+            
+        }
         setActiveStep(activeStep + 1);
     };
 
     const handleBack = () => {
+        if(activeStep === 2) {
+            return;
+        }
         setActiveStep(activeStep - 1);
     };
 
-    const handleChangeCustomer = (fieldName, fieldValue) => {
-        setData({ ...data, customer: { ...data.customer, [fieldName]: fieldValue } })
-    }
-    const handleChangeSeller = (fieldName, fieldValue) => {
-        setData({...data, seller: {...data.seller, [fieldName]: fieldValue}})
+    const handleChangeOrder = (fieldName, fieldValue) => {
+        if(fieldName === 'value' || fieldName === 'khoiLuong') {
+            fieldValue = parseFloat(fieldValue);
+        }
+        setData({...data, order: {...data.order, [fieldName]: fieldValue}})
     }
     const getStepContent = (step) => {
         switch (step) {
             case 0:
-                return <Customer handleChange={handleChangeCustomer} />;
+                return <CreateOrder handleChange={handleChangeOrder} data={data}/>;
             case 1:
-                return <Seller handleChange={handleChangeSeller} />;
-            case 2:
-                return <Review data={data} />;
+                return <OrderDetail data={data}/>;
             default:
                 throw new Error('Unknown step');
         }
@@ -81,11 +109,6 @@ function Order() {
                     borderBottom: (t) => `1px solid ${t.palette.divider}`,
                 }}
             >
-                <Toolbar>
-                    <Typography variant="h6" color="inherit" noWrap>
-                        Company name
-                    </Typography>
-                </Toolbar>
             </AppBar>
             <Container component="main" maxWidth="sm" sx={{ mb: 4 }}>
                 <Paper variant="outlined" sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}>
@@ -99,18 +122,21 @@ function Order() {
                             </Step>
                         ))}
                     </Stepper>
-                    <React.Fragment>
+                    <>
                         {activeStep === steps.length ? (
-                            <React.Fragment>
+                            <>
                                 <Typography variant="h5" gutterBottom>
                                     Thank you.
                                 </Typography>
-                                <Typography variant="subtitle1">
-                                    Order ID number is #2001539. Order confirmation email sent.
+                                <Typography variant="subtitle1" sx={{my: 3}}>
+                                    Tạo đơn hàng thành công! <br/> Mã vận đơn của bạn là {orderID}.
                                 </Typography>
-                            </React.Fragment>
+                                <div className='flex justify-end'>
+                                    <NavLink to='/' className="bg-blue-400 text-white p-3 rounded-md font-sans">Về trang chủ</NavLink>
+                                </div>
+                            </>
                         ) : (
-                            <React.Fragment>
+                            <>
                                 {getStepContent(activeStep)}
                                 <Box sx={{ display: 'flex', justifyContent: 'flex-end' }}>
                                     {activeStep !== 0 && (
@@ -127,9 +153,9 @@ function Order() {
                                         {activeStep === steps.length - 1 ? 'Place order' : 'Next'}
                                     </Button>
                                 </Box>
-                            </React.Fragment>
+                            </>
                         )}
-                    </React.Fragment>
+                    </>
                 </Paper>
                 <Copyright />
             </Container>

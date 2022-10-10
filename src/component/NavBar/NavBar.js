@@ -1,9 +1,25 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
 import { BiChevronDown } from "react-icons/bi";
+import { useEffect } from 'react';
+import axiosClient from '../../config/axiosClient';
+import { useDispatch, useSelector } from 'react-redux';
+import { setUser } from '../../slices/user';
+import { useState } from 'react';
 
 // import Service from '../Service/Service';
 const NavBar = () => {
+    const dispatch = useDispatch();
+    useEffect(() => {
+       axiosClient.get('/user')
+       .then((res) => {
+        dispatch(setUser(res.data));
+       })
+       .catch((err)=> console.log(err));
+    }, []);
+
+    const user = useSelector((state) => state.user.value);
+    
     return (
         <nav className="flex items-center md:px-20 bg-white w-full shadow">
             <div className="flex items-center">
@@ -56,7 +72,12 @@ const NavBar = () => {
                     </div>
                 </li>
                 <li className="btn-hover"><NavLink to="/policy">CHÍNH SÁCH</NavLink></li>
-                <button className="btn-signIn"><NavLink to="/login">ĐĂNG KÝ/ ĐĂNG NHẬP</NavLink></button>
+                {user === null ? <button className="btn-signIn"><NavLink to="/login">ĐĂNG KÝ/ ĐĂNG NHẬP</NavLink></button> : 
+                <>
+                  <button className="btn-signIn">{user.email}</button>
+                  
+                </>
+                }
 
             </ul>
         </nav>
