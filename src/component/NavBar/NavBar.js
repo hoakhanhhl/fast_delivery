@@ -6,20 +6,23 @@ import axiosClient from '../../config/axiosClient';
 import { useDispatch, useSelector } from 'react-redux';
 import { setUser } from '../../slices/user';
 import { useState } from 'react';
+import { BsFillGearFill } from "react-icons/bs";
+import { BsFillForwardFill } from "react-icons/bs";
+import { BsPencilSquare } from "react-icons/bs";
 
 // import Service from '../Service/Service';
 const NavBar = () => {
     const dispatch = useDispatch();
     useEffect(() => {
-       axiosClient.get('/user')
-       .then((res) => {
-        dispatch(setUser(res.data));
-       })
-       .catch((err)=> console.log(err));
+        axiosClient.get('/user')
+            .then((res) => {
+                dispatch(setUser(res.data));
+            })
+            .catch((err) => console.log(err));
     }, []);
 
     const user = useSelector((state) => state.user.value);
-    
+
     return (
         <nav className="flex items-center md:px-20 bg-white w-full shadow">
             <div className="flex items-center">
@@ -27,7 +30,7 @@ const NavBar = () => {
                     <img itemprop="logo" src="//theme.hstatic.net/200000472237/1000829412/14/logo.png?v=481" alt="GHN - Giao Hàng Nhanh Toàn Quốc" className="logoimg" />
                 </NavLink>
             </div>
-            <ul className="md:flex md:gap-10 ml-auto text-16 font-semibold mr-0">
+            <ul className="md:flex md:gap-8 ml-auto text-15 font-semibold mr-0">
                 <li className="btn-hover"><NavLink to="/">TRANG CHỦ</NavLink></li>
                 <li className="btn-hover"><NavLink to="/introduce">VỀ CHÚNG TÔI</NavLink></li>
                 <li className="btn-hover"><NavLink to="/search">TRA CỨU</NavLink></li>
@@ -72,14 +75,41 @@ const NavBar = () => {
                     </div>
                 </li>
                 <li className="btn-hover"><NavLink to="/policy">CHÍNH SÁCH</NavLink></li>
-                {user === null ? <button className="btn-signIn"><NavLink to="/login">ĐĂNG KÝ/ ĐĂNG NHẬP</NavLink></button> : 
-                <>
-                  <button className="btn-signIn">{user.email}</button>
-                  
-                </>
-                }
-
             </ul>
+            <button className="btn-signIn"><NavLink to="/login">ĐĂNG KÝ/ ĐĂNG NHẬP</NavLink></button>
+
+            {/* +++User++++ */}
+            {/* <div className="dropdown-acc">
+                <NavLink className="dropbtn-acc" to="/service">Lê Thị Khánh Hoà<BiChevronDown className="icon-dropdown-acc" /></NavLink>
+                <div class="menu-account-dropdown">
+                    <div className="dropdown-list-acc">
+                        <div class="menu-account-dropdown-item-top">
+                            <NavLink to="/" title="GHN EXPRESS">
+                                <div className='menu-flex'>
+                                    <BsPencilSquare className="icon-menu-acc" />
+                                    <span>パスワード変更</span>
+                                </div>
+                            </NavLink>
+                        </div>
+                        <a class="menu-account-dropdown-item">
+                            <NavLink to="/" title="GHN EXPRESS">
+                                <div className='menu-flex'>
+                                    <BsFillGearFill className="icon-menu-acc" />
+                                    <span>パスワード変更</span>
+                                </div>
+                            </NavLink>
+                        </a>
+                        <a class="menu-account-dropdown-item">
+                            <NavLink to="/" title="GHN EXPRESS">
+                                <div className='menu-flex'>
+                                    <BsFillForwardFill className="icon-menu-acc" />
+                                    <span>Log</span>
+                                </div>
+                            </NavLink>
+                        </a>
+                    </div>
+                </div>
+            </div> */}
         </nav>
     );
 }

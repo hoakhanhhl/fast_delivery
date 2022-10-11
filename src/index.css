@@ -20,7 +20,7 @@ code {
     @apply hover:text-orange transition-all duration-200 cursor-pointer px-2 self-center font-sans;
   }
   .btn-signIn {
-    @apply bg-orange border-orange border-2 rounded-md hover:bg-white px-8 py-2 text-white hover:text-orange font-sans;
+    @apply bg-orange border-orange border-2 rounded-md hover:bg-white px-6 py-2 ml-10 text-white hover:text-orange font-sans font-medium;
   }
 }
 .dropbtn {
@@ -645,4 +645,102 @@ ol {
 li.slick-active .dot span {
   font-weight: 700;
   font-family: "Montserrat", sans-serif;
+}
+
+/* ====dropdown-account==== */
+
+.dropdown-acc {
+  position: relative;
+  display: inline-block;
+  align-self: center;
+  margin-left: 70px;
+}
+.dropbtn-acc {
+  color: #323030;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+}
+.icon-dropdown-acc {
+  font-size: 8px;
+  margin-left: 2px;
+  color: #323030;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.menu-account-dropdown {
+  display: none;
+  background-color: #fff;
+  min-width: 214px;
+  padding-left: 15px;
+  border-radius: 3px;
+  box-shadow: 0 2px 10px 0 rgb(0 0 0 / 30%);
+  z-index: 1;
+  position: absolute;
+  top: 100%;
+  right: 0;
+}
+.dropdown-list-acc {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+.menu-account-dropdown-item-top {
+  display: block;
+  font-size: 14px;
+  color: #4a4a4a;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  align-content: center;
+}
+.menu-account-dropdown-item {
+  display: block;
+  font-size: 14px;
+  color: #4a4a4a;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid #d8d8d8;
+  align-content: center;
+}
+.menu-flex {
+  display: flex;
+  flex-direction: row;
+  justify-items: center;
+}
+.menu-account-dropdown-item span {
+  margin-left: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.menu-account-dropdown-item-top span {
+  margin-left: 10px;
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+}
+.menu-account-dropdown-item-top:hover {
+  color: #f15b1f;
+}
+.menu-account-dropdown-item:hover {
+  color: #f15b1f;
+}
+
+.dropdown-acc:hover .menu-account-dropdown {
+  display: block;
+}
+
+.dropdown-acc:hover .dropbtn-acc {
+  color: #f26522;
+}
+.dropdown-acc:hover .icon-dropdown-acc {
+  color: #f26522;
+  transform: rotate(180deg);
 }
