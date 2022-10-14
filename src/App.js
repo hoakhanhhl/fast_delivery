@@ -20,7 +20,7 @@ function App() {
         <div className='fixed w-full z-50'>
           <NavBar />
         </div>
-        <div className='pt-28'>
+        <div className='pt-28 mr-0'>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/introduce" element={<Introduce />} />

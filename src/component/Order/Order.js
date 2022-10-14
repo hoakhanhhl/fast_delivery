@@ -15,7 +15,8 @@ import CreateOrder from './CreateOrder';
 import OrderDetail from './OrderDetail';
 import { useSelector } from 'react-redux';
 import axiosClient from '../../config/axiosClient';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useEffect } from 'react';
 
 function Copyright() {
     return (
@@ -37,9 +38,13 @@ const theme = createTheme();
 
 function Order() {
     const user = useSelector((state)=> state.user.value);
-    // useEffect(()=> {
-       
-    // }, user);
+    const navigate = useNavigate();
+    useEffect(()=> {
+       if(user === null) {
+        alert("Please login to use this function!");
+        navigate("/");
+       }
+    }, []);
     const [activeStep, setActiveStep] = React.useState(0);
     const [data, setData] = React.useState({
         order: {

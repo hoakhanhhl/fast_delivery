@@ -12,8 +12,10 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axiosClient from '../../config/axiosClient';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../slices/user';
 
 const theme = createTheme();
 
@@ -23,7 +25,8 @@ function Register() {
         name: "",
         password: ""
     });
-
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const [confirmPassword, setConfirmPassword] = useState("");
     const [errMSG, setErrMSG] = useState("");
     const handleChange = (e) => {
@@ -38,9 +41,11 @@ function Register() {
         }
         else {
         axiosClient.post('/user/auth/register', userInfor ).then((res)=> {
-            console.log(res.data);
+            alert("Create user successfully!");
+            dispatch(setUser(res.data.user));
             localStorage.setItem("accessTokenFD", res.data.accessToken);
-
+            navigate("/");
+            
         }).catch((err) => setErrMSG(err.response.data));
         }
     };

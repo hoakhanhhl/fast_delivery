@@ -13,11 +13,17 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import axiosClient from '../../config/axiosClient';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { setUser } from '../../slices/user';
 
 const theme = createTheme();
 
 function SignIn() {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const [errMSG, setErrMSG] = useState("");
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -26,10 +32,13 @@ function SignIn() {
             email: data.get('email'),
             password: data.get('password'),
         }
-
         axiosClient.post('/user/auth/login', user ).then((res)=> {
             console.log(res.data);
-        }).catch((err) => console.log(err));
+            localStorage.setItem("accessTokenFD", res.data.accessToken);
+            dispatch(setUser(res.data.user));
+            alert("Login successfully!");
+            navigate("/");
+        }).catch((err) => setErrMSG(err.response.data));
     };
 
     return (
@@ -50,6 +59,7 @@ function SignIn() {
                     <Typography component="h1" variant="h5">
                         Sign in
                     </Typography>
+                    <div className='bg-rose-500 text-md my-3 text-white px-3 rounded-md w-full text-center font-sans'>{errMSG}</div>
                     <Box component="form" onSubmit={handleSubmit} noValidate sx={{ mt: 1 }}>
                         <TextField
                             margin="normal"

@@ -1,11 +1,19 @@
 import SimpleSlider from "./Slider"
 import Footer from "../Footer/Footer"
-function Home() {
+import Right from "./Right"
+import Banner from "./Banner"
+import PolicyHome from "./PolicyHome"
 
-    return <div>
-        <SimpleSlider />
-        <Footer />
-    </div>
+function Home() {
+    return (
+        <div>
+            <Right />
+            <SimpleSlider />
+            <Banner />
+            <PolicyHome />
+            <Footer />
+        </div>
+    )
 
 }
 export default Home

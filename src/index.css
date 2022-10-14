@@ -744,3 +744,123 @@ li.slick-active .dot span {
   color: #f26522;
   transform: rotate(180deg);
 }
+
+/* ====Categories-home=== */
+.categories {
+  display: flex;
+  position: fixed;
+  z-index: 30;
+  top: 22%;
+  right: 2px;
+  width: 7%;
+  flex-direction: column;
+}
+.list {
+  margin-bottom: 0;
+  background: #00467f;
+  padding: 10px 0;
+  border-radius: 5px;
+}
+.category {
+  padding: 10px 8px;
+  position: relative;
+  text-align: center;
+  width: 95px;
+  font-size: 12px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  transition: width 2s;
+}
+.category a {
+  display: block;
+  position: relative;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+}
+.category-ic {
+  line-height: 1;
+  margin: auto auto 10px;
+  width: 22px;
+}
+.category span {
+  color: white;
+}
+.category:hover.category a {
+  color: #f15b1f;
+}
+
+/* ====Banner-home=== */
+.banner-home {
+  padding-top: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 75px;
+  margin-left: 75px;
+  display: flex;
+  flex-direction: column;
+}
+.title-banner-home {
+  margin-bottom: 60px;
+  position: relative;
+  text-align: center;
+}
+.title-banner-home h2 {
+  margin-bottom: 30px;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 28px;
+  line-height: initial;
+  color: #00467f;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.title-banner-home p {
+  margin: 0 0 10px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.8;
+  font-size: 15px;
+  color: #0c1325;
+}
+
+/* ====PolicyHome==== */
+.home-policy {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: 75px;
+  margin-left: 75px;
+  display: flex;
+  flex-direction: row;
+}
+.home-policy-item {
+  width: 25%;
+  float: left;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.ic-policy {
+  align-items: center;
+  text-align: center;
+  align-content: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ic-policy img {
+  height: 50px;
+  max-width: 20%;
+  vertical-align: middle;
+}
+.desc-policy p {
+  margin: 20px 0;
+  font-weight: 500;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+}

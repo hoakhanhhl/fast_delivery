@@ -31,7 +31,7 @@ function SimpleSlider() {
                     content = "Bán Hàng Làm Giàu Cùng GHN";
                     break;
                 case 1:
-                    content = "GHN Liên Tục Cập Nhật Tuyến Ảnh Hưởng Do Dịch";
+                    content = "GHN Liên Tục Cập Nhật Tuyến Ảnh Hưởng";
                     break;
                 case 2:
                     content = "Dịch Vụ Giao Hàng Thương Mại Điện Tử";
@@ -41,8 +41,8 @@ function SimpleSlider() {
                     break;
             }
             return (
-                <div className="dot w-1/4 text-black float-left py-3 border-b-2 h-32">
-                    <span className="h-full text-sm text-center px-6 border-right-2 flex items-center justify-center border-r-2 py-6 text-black cursor-pointer font-sans font-normal transition ease-in-out delay-150 hover:font-semibold hover:text-orange duration-300 ...">{content}</span>
+                <div className="dot w-1/4 text-black float-left border-b py-2">
+                    <span className="h-full text-sm text-center flex items-center justify-center border-r py-5 text-black cursor-pointer font-sans font-normal transition ease-in-out delay-150 hover:font-semibold hover:text-orange duration-300 ...">{content}</span>
                 </div>
             );
         },
