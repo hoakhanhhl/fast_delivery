@@ -821,6 +821,11 @@ li.slick-active .dot span {
   font-size: 15px;
   color: #0c1325;
 }
+/* video {
+  display: inline-block;
+  vertical-align: baseline;
+  object-fit: contain;
+} */
 
 /* ====PolicyHome==== */
 .home-policy {
