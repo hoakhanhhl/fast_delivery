@@ -38,17 +38,16 @@ function SimpleSlider() {
         <div className="containerComment">
             <Slider {...settings}>
                 <div className="box-comment">
-                    <p>GHN là một trong những đối tác vận chuyển uy tín của Shopee. Chúng tôi kỳ vọng với hệ thống phân loại hàng tự động, GHN không chỉ rút ngắn thời gian phân loại mà còn giúp cả người bán và người mua trên Shopee an tâm đơn hàng được giao nhanh hơn, an toàn hơn.</p>
-
+                    <p>Fast-Delivery は、Shopee の有名な配送パートナーの 1 つです。 自動仕分けシステムにより、Fast-Delivery が仕分け時間を短縮するだけでなく、Shopee の販売者と購入者の両方が、注文がより迅速かつ安全に配送されることを確信できるようになることを願っています。</p>
                 </div>
                 <div className="box-comment">
-                    <p>GHN đã và luôn là đối tác rất tin cậy của Lazada hơn 7 năm qua. Việc đầu tư vào Hệ thống phân loại hàng hoàn toàn tự động sẽ giúp GHN tăng tính cạnh tranh, đồng thời mang đến cho các đối tác như chúng tôi một dịch vụ vận chuyển xuất sắc.</p>
+                    <p>Fast-Delivery は 7 年以上にわたり、Lazada の非常に信頼できるパートナーであり続けています。 完全に自動化された仕分けシステムへの投資は、Fast-Delivery の競争力を高め、当社のようなパートナーに優れた配送サービスを提供するのに役立ちます。</p>
                 </div>
                 <div className="box-comment">
-                    <p>GHN là một đối tác quan trọng với Tiki, giúp hàng hoá trên Tiki đến được với nhiều tỉnh xa, thậm chí đến cả những huyện đảo. Điều này mang đến sự thuận lợi rất lớn cho khách hàng, xoá bỏ được các rào cản về địa lý. </p>
+                    <p>Fast-Delivery は Tiki の重要なパートナーであり、Tiki の商品が多くの僻地、さらには離島地区に届くよう支援しています。 これにより、地理的な障壁がなくなり、お客様に大きな利便性がもたらされます。 </p>
                 </div>
                 <div className="box-comment">
-                    <p>GHN là một trong những đối tác quan trọng của Sendo với mục tiêu phục vụ ngành thương mại điện tử và nền kinh tế số đang tăng trưởng vượt bậc, là cầu nối vận chuyển hàng hoá từ các nhà bán đến tay người tiêu dùng một cách an toàn và nhanh chóng. </p>
+                    <p>Fast-Delivery は、売り手から消費者に商品を輸送する架け橋として、急速に成長する電子商取引業界とデジタル経済にサービスを提供することを目標とする Sendo の重要なパートナーの 1 つです。安全かつ迅速に使用されます。 </p>
                 </div>
             </Slider>
         </div>

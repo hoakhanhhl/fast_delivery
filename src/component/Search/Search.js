@@ -39,7 +39,7 @@ function Search(props) {
             className="p-6 border-2 text-black font-sans w-1/2"
             value={idOrder}
             onChange={handleChange}
-            placeholder="Nhập mã vận đơn bạn cần tìm"
+            placeholder="あなたが見つける必要がある船荷証券を入力してください"
           />
         </form>
         <div className="py-3">

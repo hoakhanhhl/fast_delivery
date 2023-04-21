@@ -8,18 +8,18 @@ function Introduce() {
     return (
         <div>
             <div className="banner-image-wrapper ">
-                <img src="//theme.hstatic.net/200000472237/1000829412/14/header_pageabout.jpg?v=481" alt="Về GHN" />
+                <img src="https://static.blog.bolt.eu/LIVE/wp-content/uploads/2020/03/30144617/business-blog_1200x628-1024x536.png" alt="Về Fast-Delivery" />
             </div>
             <div className="containerIntroduce">
                 <div className="title">
-                    <span className="subtitle"><AiOutlinePause className="icon-title" />Câu chuyện GHN</span>
-                    <h2 className="lastTitle">10 năm đồng hành cùng E-Commerce Việt Nam</h2>
+                    <span className="subtitle"><AiOutlinePause className="icon-title" />Fast-Deliveryの物語</span>
+                    <h2 className="lastTitle">Eコマースベトナムでの10年</h2>
                 </div>
                 <div className="content">
-                    <p className="p-introduce">GHN (Giao Hàng Nhanh) - Công ty giao nhận đầu tiên tại Việt Nam được thành lập năm 2012, với sứ mệnh phục vụ nhu cầu vận chuyển chuyên nghiệp của các đối tác Thương mại điện tử trên toàn quốc. GHN cam kết mang đến cho khách hàng những trải nghiệm dịch vụ giao nhận nhanh, an toàn, hiệu quả giúp người bán hàng bán được nhiều hơn, người mua hàng hài lòng hơn.</p>
+                    <p className="p-introduce">Fast-Delivery (Fast Delivery) - ベトナムで最初の転送会社は 2012 年に設立され、全国の E コマース パートナーの専門的な配送ニーズに応えることを使命としています。 Fast-Delivery は、売り手がより多くを販売し、買い物客がより満足するのに役立つ、迅速で安全かつ効果的な配送サービス体験を顧客に提供することに取り組んでいます。</p>
                 </div>
                 <div className="s-banner">
-                    <img src="//theme.hstatic.net/200000472237/1000829412/14/img_s-about_pageabout.jpg?v=481" alt="10 năm đồng hành cùng E-Commerce Việt Nam" />
+                    <img src="https://www.advotics.com/wp-content/uploads/2022/02/surat-jalan-01-1-4.png" alt="10 năm đồng hành cùng E-Commerce Việt Nam" />
                 </div>
             </div>
             <div className="linechat">
@@ -27,12 +27,12 @@ function Introduce() {
                     <div className="left-col">
                         <div className="s-title">
                             <span className="subtitle1"><AiOutlinePause className="icon-title" />Thành tích nổi bật</span>
-                            <p className="p-introduce">GHN luôn dành trọn tâm huyết để mang đến những dịch vụ giao nhận xuất sắc nhất. Niềm đam mê chất lượng đã giúp GHN đạt được những thành tích đáng kinh ngạc trong suốt 10 năm qua:<br />
-                                <br /> - 20.000.000 đơn hàng được giao thành công mỗi tháng
-                                <br /> - Hơn 100.000 shop online và doanh nghiệp đã tin dùng
-                                <br /> - Đối tác chiến lược của Tiki, Shopee, Lazada, Sendo
-                                <br /> - Mạng lưới giao nhận phủ sóng 100% 63 tỉnh thành
-                                <br /> - Đạt tốc độ xử lý 500.000 đơn hàng/ ngày
+                            <p className="p-introduce">Fast-Delivery は常に最高の転送サービスを提供することに専念しています。 品質への情熱は、Fast-Delivery が過去 10 年間に驚異的な成果を達成するのに役立ちました。<br />
+                                <br /> - 毎月 20,000,000 件の注文が正常に配送されました
+                                <br /> - 100,000 以上のオンライン ショップや企業が信頼を寄せています
+                                <br /> - Tiki、Shopee、Lazada、Sendo の戦略的パートナー
+                                <br /> - 63 州の 100% をカバーする配送ネットワーク
+                                <br /> - 500,000 注文/日の処理速度を実現
                             </p>
                         </div>
                     </div>
@@ -43,7 +43,7 @@ function Introduce() {
                             </div>
                             <div className="message">
                                 <span><b></b></span>
-                                <p className="p-introduce-x">Dù bạn đang sở hữu một trang thương mại điện tử lớn, là chủ của một cửa hàng trực tuyến hay đơn giản một người bán hàng thông thường - GHN luôn sẵn sàng cung cấp dịch vụ giao nhận hàng chuyên nghiệp cho bạn.</p>
+                                <p className="p-introduce-x">あなたが大規模な電子商取引サイトを所有しているか、オンライン ストアの所有者であるか、単に普通の販売者であるかに関係なく、Fast-Delivery は常にプロフェッショナルな配送サービスを提供する準備ができています。</p>
                                 <AiOutlinePause className="icon-affter" />
                             </div>
                         </div>
@@ -53,8 +53,8 @@ function Introduce() {
             <div className="client">
                 <div className="containerClient">
                     <div className="client-title">
-                        <span className="subtitle1"><AiOutlinePause className="icon-title" />Đối tác của GHN</span>
-                        <h2 className="lastTitle">Hơn 100.000 khách hàng đã tin dùng dịch vụ</h2>
+                        <span className="subtitle1"><AiOutlinePause className="icon-title" />Fast-Deliveryのパートナー</span>
+                        <h2 className="lastTitle">100,000 人以上の顧客がこのサービスを信頼しています</h2>
                     </div>
                     <div className="listing_client_logo">
                         <div className="client-logo">
@@ -103,8 +103,8 @@ function Introduce() {
             <div className="staff">
                 <div className="containerStaff">
                     <div className="staff-title">
-                        <span className="subtitle1"><AiOutlinePause className="icon-title" />Khác biệt dịch vụ</span>
-                        <h2 className="lastTitle">Giao nhận chuyên nghiệp cho E-commerce</h2>
+                        <span className="subtitle1"><AiOutlinePause className="icon-title" />サービスの違い</span>
+                        <h2 className="lastTitle">e コマース向けのプロフェッショナルな配送</h2>
                     </div>
                     <div className="staff-content">
                         <div className="box-staff">
@@ -112,8 +112,8 @@ function Introduce() {
                                 <img src="//theme.hstatic.net/200000472237/1000829412/14/staff_avatar1.jpg?v=481" alt="Đa dạng dịch vụ" />
                             </div>
                             <div className="box-staff-desc">
-                                <h3>Đa dạng dịch vụ</h3>
-                                <p className="p-introduce">Giao hàng thương mại điện tử, Vận tải cho doanh nghiệp, Kho bãi và xử lý hàng hóa</p>
+                                <h3>サービスの多様性</h3>
+                                <p className="p-introduce">電子商取引の配送、業務用輸送、倉庫保管および取り扱い</p>
                             </div>
                         </div>
                         <div className="box-staff">
@@ -121,8 +121,8 @@ function Introduce() {
                                 <img src="//theme.hstatic.net/200000472237/1000829412/14/staff_avatar2.jpg?v=481" alt="Hệ thống Auto-Sorting" />
                             </div>
                             <div className="box-staff-desc">
-                                <h3>Hệ thống Auto-Sorting</h3>
-                                <p className="p-introduce">Tự hào sở hữu 2 hệ thống phân loại hàng tự động 100% đầu tiên tại Việt Nam</p>
+                                <h3>自動仕分けシステム</h3>
+                                <p className="p-introduce">ベトナムで最初の 2 つの 100% 自動仕分けシステムを誇らしげに所有</p>
                             </div>
                         </div>
                         <div className="box-staff">
@@ -130,8 +130,8 @@ function Introduce() {
                                 <img src="//theme.hstatic.net/200000472237/1000829412/14/staff_avatar3.jpg?v=481" alt="Chính sách ưu đãi hấp dẫn" />
                             </div>
                             <div className="box-staff-desc">
-                                <h3>Chính sách ưu đãi hấp dẫn</h3>
-                                <p className="p-introduce">Miễn phí Lấy hàng tận nơi, Miễn phí Thu hộ, Miễn phí Giao lại, Hoàn đến 6% khi nạp GHN Xu</p>
+                                <h3>魅力的な優遇政策</h3>
+                                <p className="p-introduce">無料ピックアップ、無料ピックアップ、無料再配送、チャージした Fast-Delivery コインで最大 6% のキャッシュバック</p>
                             </div>
                         </div>
                     </div>
@@ -141,14 +141,14 @@ function Introduce() {
                 <div className="containerHiring">
                     <div className="col-left">
                         <div className="s-abouttitle">
-                            <h2 className="lastTitle"> Bạn muốn tham gia cùng chúng tôi</h2>
-                            <p className="p-introduce">Luôn có cơ hội cho bạn tại GHN. Khám phá các cơ hội hấp dẫn và tham gia vào đội ngũ của chúng tôi.</p>
+                            <h2 className="lastTitle"> 私たちに参加したいですか？</h2>
+                            <p className="p-introduce">Fast-Deliveryにはいつでもチャンスがあります。 エキサイティングな機会を探り、私たちのチームに参加してください。</p>
                         </div>
-                        <a className="get-in-touch" href="https://ghn.vn/blogs/tuyen-dung">
+                        <a className="get-in-touch" href="https://Fast-Delivery.vn/blogs/tuyen-dung">
                             <span className="icon">
                                 <ImMail4 className='w-full' />
                             </span>
-                            <span>Tìm kiếm cơ hội nghề nghiệp</span>
+                            <span>キャリアの機会を探している</span>
                         </a>
                     </div>
                     <div className="col-right">

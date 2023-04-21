@@ -69,7 +69,7 @@ code {
   float: left;
   color: black;
   padding: 15px 10px 10px;
-  border: 1px solid #f26522;
+  border: 1px solid #4e5ab8;
   border-right: none;
   text-decoration: none;
   display: block;
@@ -80,7 +80,7 @@ code {
   float: left;
   color: black;
   padding: 15px 10px 10px;
-  border: 1px solid #f26522;
+  border: 1px solid #656b9c;
   text-decoration: none;
   display: block;
 }
@@ -88,7 +88,7 @@ code {
 .dropdown-content-last {
   color: black;
   width: 100%;
-  border: 1px solid #f26522;
+  border: 1px solid #656b9c;
   padding: 15px 10px 10px;
   border-top: none;
   text-decoration: none;
@@ -138,10 +138,10 @@ code {
 }
 
 .dropdown:hover .dropbtn {
-  color: #f26522;
+  color: #656b9c;
 }
 .dropdown:hover .icon-dropdown {
-  color: #f26522;
+  color: #656b9c;
   transform: rotate(180deg);
 }
 /* 
@@ -465,7 +465,7 @@ h3 {
   transition: color 0.2s;
 }
 .get-in-touch:hover {
-  color: #f26522;
+  color: #656b9c;
 }
 .icon {
   font-size: 46px;
@@ -486,8 +486,8 @@ h3 {
   left: 0;
   bottom: 0;
   margin: auto;
-  background: #f26522;
-  color: #f26522;
+  background: #656b9c;
+  color: #656b9c;
 }
 .icon-affter {
   color: white;
@@ -738,10 +738,10 @@ li.slick-active .dot span {
 }
 
 .dropdown-acc:hover .dropbtn-acc {
-  color: #f26522;
+  color: #656b9c;
 }
 .dropdown-acc:hover .icon-dropdown-acc {
-  color: #f26522;
+  color: #656b9c;
   transform: rotate(180deg);
 }
 

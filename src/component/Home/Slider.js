@@ -28,16 +28,16 @@ function SimpleSlider() {
             let content = "";
             switch (i) {
                 case 0:
-                    content = "Bán Hàng Làm Giàu Cùng GHN";
+                    content = "Fast-Deliveryで金持ちになる";
                     break;
                 case 1:
-                    content = "GHN Liên Tục Cập Nhật Tuyến Ảnh Hưởng";
+                    content = "Fast-Deliveryは影響力を継続的に更新します";
                     break;
                 case 2:
-                    content = "Dịch Vụ Giao Hàng Thương Mại Điện Tử";
+                    content = "Eコマース配送サービス";
                     break;
                 case 3:
-                    content = "Dịch Vụ Kho Và Xử Lý Đơn Hàng";
+                    content = "倉庫サービスと注文処理";
                     break;
             }
             return (
@@ -61,16 +61,16 @@ function SimpleSlider() {
         <div className="w-full">
             <Slider {...settings}>
                 <div className="w-full cursor-pointer">
-                    <img src="//theme.hstatic.net/200000472237/1000829412/14/slideshow_2.jpg?v=488" alt="Bán Hàng Làm Giàu Cùng GHN" />
+                    <img src="https://www.apsfulfillment.com/wp-content/uploads/2017/03/APS_28-1144x763.jpg" alt="Bán Hàng Làm Giàu Cùng Fast-Delivery" />
                 </div>
                 <div className="w-full cursor-pointer">
-                    <img src="//theme.hstatic.net/200000472237/1000829412/14/slideshow_3.jpg?v=488" alt="GHN Liên Tục Cập Nhật Tuyến Ảnh Hưởng Do Dịch" />
+                    <img src="https://s3.ap-southeast-1.amazonaws.com/files-scs-prod/public%2Fimages%2F1608186959042-Last+Mile+Delivery+%281%29.png" alt="Fast-Delivery Liên Tục Cập Nhật Tuyến Ảnh Hưởng Do Dịch" />
                 </div>
                 <div className="w-full cursor-pointer">
-                    <img src="//theme.hstatic.net/200000472237/1000829412/14/slideshow_7.jpg?v=488" alt="GHN Express - Dịch vụ giao hàng thương mại điện tử" />
+                    <img src="https://www.ikea.com/ext/ingkadam/m/1cfa4e91da3b67a9/original/PH186233-crop003.jpg" alt="Fast-Delivery Express - Dịch vụ giao hàng thương mại điện tử" />
                 </div>
                 <div className="w-full cursor-pointer">
-                    <img src="//theme.hstatic.net/200000472237/1000829412/14/slideshow_8.jpg?v=488" alt="GHN Fulfillment - Dịch vụ kho và xử lý đơn hàng" />
+                    <img src="https://static.blog.bolt.eu/LIVE/wp-content/uploads/2020/03/30144617/business-blog_1200x628-1024x536.png" alt="Fast-Delivery Fulfillment - Dịch vụ kho và xử lý đơn hàng" />
                 </div>
             </Slider>
         </div>

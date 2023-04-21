@@ -9,7 +9,7 @@ function Right() {
                         <div className="category-ic">
                             <img src="//theme.hstatic.net/200000472237/1000829412/14/faq1.png?v=488" alt="Hệ thống bưu cục" />
                         </div>
-                        <span>Hệ thống bưu cục</span>
+                        <span>郵便局システム</span>
                     </a>
                 </li>
                 <li className="category">
@@ -17,7 +17,7 @@ function Right() {
                         <div className="category-ic">
                             <img src="//theme.hstatic.net/200000472237/1000829412/14/faq2.png?v=488" alt="Chính sách bồi thường" />
                         </div>
-                        <span>Chính sách bồi thường</span>
+                        <span>報酬方針</span>
                     </a>
                 </li>
                 <li className="category">
@@ -25,7 +25,7 @@ function Right() {
                         <div className="category-ic">
                             <img src="//theme.hstatic.net/200000472237/1000829412/14/faq3.png?v=488" alt="Hàng hoá không vận chuyển" />
                         </div>
-                        <span>Hàng hoá không vận chuyển</span>
+                        <span>発送されない商品</span>
                     </a>
                 </li>
                 <li className="category">
@@ -33,7 +33,7 @@ function Right() {
                         <div className="category-ic">
                             <img src="//theme.hstatic.net/200000472237/1000829412/14/faq4.png?v=488" alt="Quy định về khiếu nại" />
                         </div>
-                        <span>Quy định về khiếu nại</span>
+                        <span>苦情に関する規定</span>
                     </a>
                 </li>
             </ul>
